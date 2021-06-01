@@ -1,0 +1,12 @@
+piVersion: v1
+kind: Service
+metadata:
+  name: servico-nginx
+  namespace: aulainfra
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
